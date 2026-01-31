@@ -2,7 +2,7 @@
 
 XenoPHP is a secure, monolithic web platform built on **Laravel 11** and **React**. It is designed to behave like a static site publicly while maintaining a powerful, dynamic backend.
 
-## 🚀 Key Features
+## Key Features
 
 - **Secure Core**:
   - Custom **Secure Headers** (CSP, HSTS, X-Frame-Options).
@@ -22,7 +22,7 @@ XenoPHP is a secure, monolithic web platform built on **Laravel 11** and **React
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the Repository**
 
@@ -56,7 +56,7 @@ XenoPHP is a secure, monolithic web platform built on **Laravel 11** and **React
 
 ---
 
-## ⚡ Usage
+## Usage
 
 ### Development Server
 
@@ -81,7 +81,7 @@ Point your web server (Nginx/Apache) to the `public/` directory.
 
 ---
 
-## 🛡️ Admin Dashboard
+## Admin Dashboard
 
 To view the access logs:
 
@@ -91,7 +91,7 @@ To view the access logs:
 
 ---
 
-## 📂 Structure
+## Structure
 
 - `xeno`: CLI Entry point.
 - `public/`: The ONLY public folder. Contains `index.php` and built assets.
