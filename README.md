@@ -27,7 +27,7 @@ XenoPHP is a secure, monolithic web platform built on **Laravel 11** and **React
 1. **Clone the Repository**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/Asadullah-nadeem/XenoPHP.git
     cd XenoPHP
     ```
 
