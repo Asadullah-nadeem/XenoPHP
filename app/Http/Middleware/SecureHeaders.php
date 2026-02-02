@@ -21,7 +21,7 @@ class SecureHeaders
         $response->headers->set('X-XSS-Protection', '1; mode=block');
         $response->headers->set('X-Content-Type-Options', 'nosniff');
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
-        $response->headers->set('Content-Security-Policy', "default-src 'self' 'unsafe-inline' 'unsafe-eval' data:; connect-src 'self'; img-src 'self' data:; font-src 'self';");
+        $response->headers->set('Content-Security-Policy', "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: http://localhost:5173 http://127.0.0.1:5173 https://fonts.bunny.net https://fonts.googleapis.com; connect-src 'self' http://localhost:5173 http://127.0.0.1:5173 ws://localhost:5173 http://localhost:3000 ws://localhost:3000; style-src 'self' 'unsafe-inline' https://fonts.bunny.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.bunny.net https://fonts.gstatic.com; img-src 'self' data:;");
 
         return $response;
     }
