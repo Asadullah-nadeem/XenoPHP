@@ -1,5 +1,6 @@
 import '../css/app.css';
 import './bootstrap';
+import './socket';
 
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -15,8 +16,12 @@ createInertiaApp({
             import.meta.glob('./Pages/**/*.jsx'),
         ),
     setup({ el, App, props }) {
+        if (!el) {
+            console.error('Inertia root element not found!');
+            return;
+        }
+        console.log('Mounting Inertia app...');
         const root = createRoot(el);
-
         root.render(<App {...props} />);
     },
     progress: {
