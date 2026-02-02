@@ -1,6 +1,6 @@
 # XenoPHP Framework
 
-XenoPHP is a secure, monolithic web platform built on **Laravel 11** and **React**. It is designed to behave like a static site publicly while maintaining a powerful, dynamic backend.
+XenoPHP is a secure, microservice-oriented PHP system that integrates multiple frameworks such as CodeIgniter, Laravel, CakePHP, and others. It is built for structured, high-performance API development, supports multi-server architecture, and is optimized for secure APIs using GraphQL and other modern technologies.
 
 ---
 
