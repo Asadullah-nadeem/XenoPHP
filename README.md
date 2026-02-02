@@ -1,4 +1,4 @@
-<p align="center"><img src="xenophp_logo_transparent.png" width="400" alt="XenoPHP Framework Logo"></p>
+<p align="center"><img src="xenophp_logo.png" width="400" alt="XenoPHP Framework Logo"></p>
 
 # XenoPHP Framework
 
