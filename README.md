@@ -30,13 +30,13 @@ cp .env.example .env
 
 ### 4. Initialize Application
 
-> **Important:** Use the `php xeno` prefix instead of `php artisan`.
 
 ```bash
 php xeno key:generate
 php xeno migrate
 
 ```
+> **Important:** Use the `php xeno` prefix instead of `php artisan`.
 
 ---
 
