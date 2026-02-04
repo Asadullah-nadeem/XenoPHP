@@ -27,14 +27,14 @@ class SocketServe extends Command
      */
     public function handle()
     {
-        global $argv;
         $argv[0] = 'socket:serve';
         $argv[1] = $this->argument('action');
 
-        $this->info("Socket.io server running on port 3000");
+        $port = 3000;
+        $this->info("Socket.io server running on port {$port}");
 
         // Listen on port 3000
-        $io = new SocketIO(3000);
+        $io = new SocketIO($port);
 
         $io->on('connection', function ($socket) {
             $this->info("New client connected: {$socket->id}");

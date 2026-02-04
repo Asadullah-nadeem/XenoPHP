@@ -16,14 +16,21 @@ class SmokeTest extends TestCase
 
         $response->assertStatus(200)
                  ->assertJsonStructure([
+                     'success',
                      'message',
-                     'description',
-                     'versions' => [
-                         'laravel',
-                         'php',
-                         'cakephp',
-                         'symfony',
-                         'codeigniter',
+                     'data' => [
+                         'description',
+                         'versions' => [
+                             'laravel',
+                             'php',
+                             'cakephp',
+                             'symfony',
+                             'codeigniter',
+                         ],
+                         'performance' => [
+                             'load_time_ms',
+                             'load_time_sec',
+                         ],
                      ],
                  ]);
     }
