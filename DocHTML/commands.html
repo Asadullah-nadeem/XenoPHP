@@ -103,7 +103,18 @@
           <tr>
             <td>serve</td>
             <td>php xeno serve</td>
-            <td>Serve the application on the PHP development server</td>
+            <td>
+              Serve the application on the PHP development server.
+              <br><br>
+              <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                <strong>Interactive Options:</strong><br>
+                You will be asked: <em>"Do you need the Socket.io server?"</em>
+                <ul style="margin: 5px 0 10px 20px;">
+                  <li><strong>Yes:</strong> Runs Web Server (8000) + Socket Server (3000)</li>
+                  <li><strong>No:</strong> Runs Web Server only</li>
+                </ul>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>tinker</td>
@@ -116,6 +127,8 @@
             <td>Bring application in/out of maintenance mode</td>
           </tr>
         </table>
+
+
 
         <h4 class="section__title">Xeno Specific</h4>
         <table id="customers">
