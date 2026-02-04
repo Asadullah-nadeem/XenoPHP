@@ -20,6 +20,8 @@
       <div class="menu__item toggle"><span></span></div>
       <li class="menu__item"><a href="#" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
       <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      <li class="menu__item"><a href="commands.html" class="link link--dark"><i class="fa fa-terminal"></i> CLI
+          Reference</a></li>
     </ul>
   </nav>
   <div class="wrapper">
@@ -111,6 +113,25 @@ $ php xeno serve --internal
             </pre>
         </div>
         <p>Once started, the server usually runs on <code>http://127.0.0.1:8000</code>.</p>
+
+        <h4 class="section__title">Interactive Easy Mode (New)</h4>
+        <p>Overwhelmed by commands? XenoPHP includes an interactive wrapper that categorizes and searches all available
+          CLI tools for you.</p>
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
+            <code>
+$ php xeno xeno:easy
+
+Welcome to XenoPHP Easy Mode! 🚀
+Select a command category (or type to search):
+ [0] Global
+ [1] Make
+ [2] Database
+ ...
+            </code>
+          </pre>
+        </div>
+        <p>This tool is perfect for discovering new features or running complex commands without memorizing flags.</p>
       </section>
 
       <!-- Configuration -->

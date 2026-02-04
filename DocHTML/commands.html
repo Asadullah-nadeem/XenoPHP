@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="XenoPHP Command Reference">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XenoPHP Command Reference</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-doc.css">
+  <style>
+    /* Custom styles for command reference */
+    .command-group {
+      margin-bottom: 2rem;
+    }
+
+    .command-name {
+      font-family: monospace;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .command-desc {
+      margin-left: 1rem;
+      color: #555;
+    }
+
+    /* Enhance table for commands */
+    #customers td:first-child {
+      white-space: nowrap;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 600;
+      color: #d33c43;
+    }
+
+    #customers td:nth-child(2) {
+      font-family: 'Courier New', Courier, monospace;
+      color: #2c3e50;
+      font-size: 0.9em;
+      background-color: #f8f9fa;
+      padding: 4px 8px;
+    }
+
+    /* Sidebar adjustments */
+  </style>
+</head>
+
+<body>
+  <div class="doc__bg"></div>
+  <nav class="header">
+    <h1 class="logo">XenoPHP <span class="logo__thin">CLI</span></h1>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <aside class="doc__nav">
+      <ul>
+        <li class="js-btn selected">Essentials</li>
+        <li class="js-btn">Generators (Make)</li>
+        <li class="js-btn">Database</li>
+        <li class="js-btn">System & Chaos</li>
+        <li class="js-btn">Runtime & Queue</li>
+        <li class="js-btn">Security</li>
+        <li class="js-btn">Advanced Utilities</li>
+        <li class="js-btn">Other Packages</li>
+      </ul>
+    </aside>
+    <article class="doc__content">
+
+      <!-- Essentials -->
+      <section class="js-section">
+        <h3 class="section__title">Essentials</h3>
+        <p>Core commands to manage the application lifecycle and development.</p>
+
+        <h4 class="section__title">Global Commands</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>about</td>
+            <td>php xeno about</td>
+            <td>Display basic information about your application</td>
+          </tr>
+          <tr>
+            <td>help</td>
+            <td>php xeno help [cmd]</td>
+            <td>Display help for a command</td>
+          </tr>
+          <tr>
+            <td>list</td>
+            <td>php xeno list</td>
+            <td>List all available commands</td>
+          </tr>
+          <tr>
+            <td>serve</td>
+            <td>php xeno serve</td>
+            <td>Serve the application on the PHP development server</td>
+          </tr>
+          <tr>
+            <td>tinker</td>
+            <td>php xeno tinker</td>
+            <td>Interact with your application REPL</td>
+          </tr>
+          <tr>
+            <td>up / down</td>
+            <td>php xeno up</td>
+            <td>Bring application in/out of maintenance mode</td>
+          </tr>
+        </table>
+
+        <h4 class="section__title">Xeno Specific</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>xeno:easy</td>
+            <td>php xeno xeno:easy</td>
+            <td>Interactive menu to discover and run commands easily</td>
+          </tr>
+          <tr>
+            <td>xeno:optimize</td>
+            <td>php xeno xeno:optimize</td>
+            <td>Cache everything to make the application "Fast" and "Powerful"</td>
+          </tr>
+          <tr>
+            <td>server:check</td>
+            <td>php xeno server:check</td>
+            <td>Check server environment requirements</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Generators -->
+      <section class="js-section">
+        <h3 class="section__title">Generators (Make)</h3>
+        <p>Scaffold new classes and files instantly.</p>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>make:controller</td>
+            <td>php xeno make:controller [Name]</td>
+            <td>Create a new controller class</td>
+          </tr>
+          <tr>
+            <td>make:model</td>
+            <td>php xeno make:model [Name]</td>
+            <td>Create a new Eloquent model class</td>
+          </tr>
+          <tr>
+            <td>make:migration</td>
+            <td>php xeno make:migration [Name]</td>
+            <td>Create a new migration file</td>
+          </tr>
+          <tr>
+            <td>make:mail</td>
+            <td>php xeno make:mail [Name]</td>
+            <td>Create a new email class</td>
+          </tr>
+          <tr>
+            <td>make:notification</td>
+            <td>php xeno make:notification [Name]</td>
+            <td>Create a new notification class</td>
+          </tr>
+          <tr>
+            <td>make:provider</td>
+            <td>php xeno make:provider [Name]</td>
+            <td>Create a new service provider</td>
+          </tr>
+          <tr>
+            <td>make:seeder</td>
+            <td>php xeno make:seeder [Name]</td>
+            <td>Create a new seeder class</td>
+          </tr>
+          <tr>
+            <td>make:factory</td>
+            <td>php xeno make:factory [Name]</td>
+            <td>Create a new model factory</td>
+          </tr>
+          <tr>
+            <td>make:middleware</td>
+            <td>php xeno make:middleware [Name]</td>
+            <td>Create a new HTTP middleware class</td>
+          </tr>
+          <tr>
+            <td>make:request</td>
+            <td>php xeno make:request [Name]</td>
+            <td>Create a new form request class</td>
+          </tr>
+          <tr>
+            <td>make:resource</td>
+            <td>php xeno make:resource [Name]</td>
+            <td>Create a new resource</td>
+          </tr>
+          <tr>
+            <td>make:command</td>
+            <td>php xeno make:command [Name]</td>
+            <td>Create a new Artisan command</td>
+          </tr>
+          <tr>
+            <td>make:event</td>
+            <td>php xeno make:event [Name]</td>
+            <td>Create a new event class</td>
+          </tr>
+          <tr>
+            <td>make:listener</td>
+            <td>php xeno make:listener [Name]</td>
+            <td>Create a new event listener class</td>
+          </tr>
+          <tr>
+            <td>make:job</td>
+            <td>php xeno make:job [Name]</td>
+            <td>Create a new job class</td>
+          </tr>
+          <tr>
+            <td>make:test</td>
+            <td>php xeno make:test [Name]</td>
+            <td>Create a new test class</td>
+          </tr>
+        </table>
+        <p><em>...and many more. Run `php xeno list` to see all.</em></p>
+      </section>
+
+      <!-- Database -->
+      <section class="js-section">
+        <h3 class="section__title">Database Management</h3>
+        <p>Manage your database schema, seeds, and models.</p>
+
+        <h4 class="section__title">Migrations</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>migrate</td>
+            <td>php xeno migrate</td>
+            <td>Run the database migrations</td>
+          </tr>
+          <tr>
+            <td>migrate:fresh</td>
+            <td>php xeno migrate:fresh</td>
+            <td>Drop all tables and re-run all migrations</td>
+          </tr>
+          <tr>
+            <td>migrate:rollback</td>
+            <td>php xeno migrate:rollback</td>
+            <td>Rollback the last database migration</td>
+          </tr>
+          <tr>
+            <td>migrate:status</td>
+            <td>php xeno migrate:status</td>
+            <td>Show the status of each migration</td>
+          </tr>
+        </table>
+
+        <h4 class="section__title">Seeding & DB</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>db:seed</td>
+            <td>php xeno db:seed</td>
+            <td>Seed the database with records</td>
+          </tr>
+          <tr>
+            <td>db:wipe</td>
+            <td>php xeno db:wipe</td>
+            <td>Drop all tables, views, and types</td>
+          </tr>
+          <tr>
+            <td>db:table</td>
+            <td>php xeno db:table [table]</td>
+            <td>Display information about a given table</td>
+          </tr>
+          <tr>
+            <td>db:show</td>
+            <td>php xeno db:show</td>
+            <td>Display information about the database</td>
+          </tr>
+          <tr>
+            <td>model:prune</td>
+            <td>php xeno model:prune</td>
+            <td>Prune models that are no longer needed</td>
+          </tr>
+          <tr>
+            <td>model:show</td>
+            <td>php xeno model:show [Model]</td>
+            <td>Show information about an Eloquent model</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- System & Chaos -->
+      <section class="js-section">
+        <h3 class="section__title">System & Optimization</h3>
+        <p>Tools to clear caches, optimize performance, and manage configurations.</p>
+
+        <h4 class="section__title">Optimization</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>optimize</td>
+            <td>php xeno optimize</td>
+            <td>Cache framework bootstrap, config, and metadata</td>
+          </tr>
+          <tr>
+            <td>optimize:clear</td>
+            <td>php xeno optimize:clear</td>
+            <td>Remove the cached bootstrap files</td>
+          </tr>
+          <tr>
+            <td>config:cache</td>
+            <td>php xeno config:cache</td>
+            <td>Create a cache file for faster configuration loading</td>
+          </tr>
+          <tr>
+            <td>route:cache</td>
+            <td>php xeno route:cache</td>
+            <td>Create a route cache file</td>
+          </tr>
+          <tr>
+            <td>view:cache</td>
+            <td>php xeno view:cache</td>
+            <td>Compile all Blade templates</td>
+          </tr>
+          <tr>
+            <td>event:cache</td>
+            <td>php xeno event:cache</td>
+            <td>Discover and cache the application's events</td>
+          </tr>
+        </table>
+
+        <h4 class="section__title">Clearing & Debug</h4>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>cache:clear</td>
+            <td>php xeno cache:clear</td>
+            <td>Flush the application cache</td>
+          </tr>
+          <tr>
+            <td>config:clear</td>
+            <td>php xeno config:clear</td>
+            <td>Remove the configuration cache file</td>
+          </tr>
+          <tr>
+            <td>route:clear</td>
+            <td>php xeno route:clear</td>
+            <td>Remove the route cache file</td>
+          </tr>
+          <tr>
+            <td>view:clear</td>
+            <td>php xeno view:clear</td>
+            <td>Clear all compiled view files</td>
+          </tr>
+          <tr>
+            <td>event:clear</td>
+            <td>php xeno event:clear</td>
+            <td>Clear all cached events and listeners</td>
+          </tr>
+          <tr>
+            <td>route:list</td>
+            <td>php xeno route:list</td>
+            <td>List all registered routes</td>
+          </tr>
+          <tr>
+            <td>storage:link</td>
+            <td>php xeno storage:link</td>
+            <td>Create the symbolic links configured for the application</td>
+          </tr>
+          <tr>
+            <td>storage:unlink</td>
+            <td>php xeno storage:unlink</td>
+            <td>Delete existing symbolic links</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Runtime & Queue -->
+      <section class="js-section">
+        <h3 class="section__title">Runtime & Queues</h3>
+        <p>Manage background jobs, schedules, and events.</p>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>queue:work</td>
+            <td>php xeno queue:work</td>
+            <td>Start processing jobs on the queue as a daemon</td>
+          </tr>
+          <tr>
+            <td>queue:listen</td>
+            <td>php xeno queue:listen</td>
+            <td>Listen to a given queue</td>
+          </tr>
+          <tr>
+            <td>queue:restart</td>
+            <td>php xeno queue:restart</td>
+            <td>Restart queue worker daemons after current job</td>
+          </tr>
+          <tr>
+            <td>queue:monitor</td>
+            <td>php xeno queue:monitor [queue]</td>
+            <td>Monitor the size of the specified queues</td>
+          </tr>
+          <tr>
+            <td>queue:retry</td>
+            <td>php xeno queue:retry [id]</td>
+            <td>Retry a failed queue job</td>
+          </tr>
+          <tr>
+            <td>queue:failed</td>
+            <td>php xeno queue:failed</td>
+            <td>List all failed queue jobs</td>
+          </tr>
+          <tr>
+            <td>schedule:run</td>
+            <td>php xeno schedule:run</td>
+            <td>Run the scheduled commands</td>
+          </tr>
+          <tr>
+            <td>schedule:work</td>
+            <td>php xeno schedule:work</td>
+            <td>Start the schedule worker (Dev)</td>
+          </tr>
+          <tr>
+            <td>schedule:list</td>
+            <td>php xeno schedule:list</td>
+            <td>List all scheduled tasks</td>
+          </tr>
+          <tr>
+            <td>event:list</td>
+            <td>php xeno event:list</td>
+            <td>List the application's events and listeners</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Security -->
+      <section class="js-section">
+        <h3 class="section__title">Security</h3>
+        <p>Manage authentication, encryption, and protection.</p>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>key:generate</td>
+            <td>php xeno key:generate</td>
+            <td>Set the application key</td>
+          </tr>
+          <tr>
+            <td>shield:status</td>
+            <td>php xeno shield:status</td>
+            <td>Check the security Shield status</td>
+          </tr>
+          <tr>
+            <td>sanctum:prune-expired</td>
+            <td>php xeno sanctum:prune-expired</td>
+            <td>Prune expired tokens</td>
+          </tr>
+          <tr>
+            <td>auth:clear-resets</td>
+            <td>php xeno auth:clear-resets</td>
+            <td>Flush expired password reset tokens</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Advanced Utilities -->
+      <section class="js-section">
+        <h3 class="section__title">Advanced Utilities</h3>
+        <p>Helper commands for environment management, broadcasting, and publishing.</p>
+        <table id="customers">
+          <tr>
+            <th>Command</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>env:encrypt</td>
+            <td>php xeno env:encrypt</td>
+            <td>Encrypt environment file</td>
+          </tr>
+          <tr>
+            <td>env:decrypt</td>
+            <td>php xeno env:decrypt</td>
+            <td>Decrypt environment file</td>
+          </tr>
+          <tr>
+            <td>channel:list</td>
+            <td>php xeno channel:list</td>
+            <td>List all registered private broadcast channels</td>
+          </tr>
+          <tr>
+            <td>install:api</td>
+            <td>php xeno install:api</td>
+            <td>Install API routes and Sanctum/Passport</td>
+          </tr>
+          <tr>
+            <td>install:broadcasting</td>
+            <td>php xeno install:broadcasting</td>
+            <td>Create broadcasting channel routes file</td>
+          </tr>
+          <tr>
+            <td>lang:publish</td>
+            <td>php xeno lang:publish</td>
+            <td>Publish language files for customization</td>
+          </tr>
+          <tr>
+            <td>stub:publish</td>
+            <td>php xeno stub:publish</td>
+            <td>Publish customizable code stubs</td>
+          </tr>
+          <tr>
+            <td>schema:dump</td>
+            <td>php xeno schema:dump</td>
+            <td>Dump the database schema</td>
+          </tr>
+          <tr>
+            <td>package:discover</td>
+            <td>php xeno package:discover</td>
+            <td>Rebuild the cached package manifest</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Other Packages -->
+      <section class="js-section">
+        <h3 class="section__title">Packages & Ecosystem</h3>
+        <p>Commands for integrated packages and tools.</p>
+        <table id="customers">
+          <tr>
+            <th>Namespace</th>
+            <th>Usage Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>inertia:*</strong></td>
+            <td>php xeno inertia:middleware</td>
+            <td>Tools for Inertia.js (SSR, middleware)</td>
+          </tr>
+          <tr>
+            <td><strong>breeze:install</strong></td>
+            <td>php xeno breeze:install</td>
+            <td>Install Breeze controllers and resources</td>
+          </tr>
+          <tr>
+            <td><strong>sail:*</strong></td>
+            <td>php xeno sail:install</td>
+            <td>Manage Laravel Sail (Docker) environment</td>
+          </tr>
+          <tr>
+            <td><strong>ziggy:generate</strong></td>
+            <td>php xeno ziggy:generate</td>
+            <td>Generate JavaScript routes file</td>
+          </tr>
+          <tr>
+            <td><strong>vendor:publish</strong></td>
+            <td>php xeno vendor:publish</td>
+            <td>Publish assets from vendor packages</td>
+          </tr>
+          <tr>
+            <td><strong>socket:serve</strong></td>
+            <td>php xeno socket:serve</td>
+            <td>Start the Socket.io server</td>
+          </tr>
+        </table>
+      </section>
+
+    </article>
+  </div>
+
+  <footer class="footer">XenoPHP - Built for Power, Designed for Security.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scribbler.js"></script>
+</body>
+
+</html>
