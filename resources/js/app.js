@@ -1,4 +1,3 @@
-import '../css/app.css';
 import './bootstrap';
 
 // Initialize socket asynchronously if needed (for your backend logic)
