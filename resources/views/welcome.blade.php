@@ -14,7 +14,8 @@
 <body class="antialiased font-sans bg-gray-50 dark:bg-[#0f172a] text-black dark:text-white">
     <div class="min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-`~            <main class="mt-6">
+    
+            <main class="mt-6">
                 <div class="text-center">
                     <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
                         Welcome to XenoPHP
