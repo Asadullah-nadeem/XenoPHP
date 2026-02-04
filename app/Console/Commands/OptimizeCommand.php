@@ -12,7 +12,7 @@ class OptimizeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'xeno:optimize';
+    protected $signature = 'optimize';
 
     /**
      * The console command description.
