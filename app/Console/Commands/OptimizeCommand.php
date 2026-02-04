@@ -26,7 +26,7 @@ class OptimizeCommand extends Command
      */
     public function handle()
     {
-        $this->info('🚀 Making XenoPHP Fast & Powerful...');
+        $this->info('Making XenoPHP Fast & Powerful...');
         $this->newLine();
 
         // 1. Config Cache
@@ -37,9 +37,8 @@ class OptimizeCommand extends Command
         $this->call('route:cache');
         $this->info('✔ Routes Cached');
 
-        // 3. View Cache
-        $this->call('view:cache');
-        $this->info('✔ Views Cached');
+        // 3. Views Skipped (MC Architecture)
+        // $this->call('view:cache');
 
         // 4. Optimize Autoloader
         $this->info('Processing Composer Optimization...');
