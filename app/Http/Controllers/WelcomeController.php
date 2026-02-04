@@ -15,12 +15,16 @@ class WelcomeController extends Controller
         $symfonyVersion = class_exists(SymfonyKernel::class) ? SymfonyKernel::VERSION : 'N/A';
         $ciVersion = defined('CI_VERSION') ? CI_VERSION : 'N/A';
 
-        return view('welcome', [
-            'laravelVersion' => app()->version(),
-            'phpVersion' => PHP_VERSION,
-            'cakeVersion' => $cakeVersion,
-            'symfonyVersion' => $symfonyVersion,
-            'ciVersion' => $ciVersion,
+        return response()->json([
+            'message' => 'Welcome to XenoPHP',
+            'description' => 'Combining the strengths of Laravel, CakePHP, Symfony, and CodeIgniter into a single, powerful backend framework.',
+            'versions' => [
+                'laravel' => app()->version(),
+                'php' => PHP_VERSION,
+                'cakephp' => $cakeVersion,
+                'symfony' => $symfonyVersion,
+                'codeigniter' => $ciVersion,
+            ]
         ]);
     }
 }

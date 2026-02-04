@@ -16,7 +16,7 @@ $app = require_once __DIR__ . '/bootstrap/app.php';
 // Handle custom loop logic for "php xeno serve"
 if (isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] === 'serve') {
     // Check if we are already running via npm (using the flag)
-    $internalIndex = array_search('--internal-process', $_SERVER['argv']);
+    $internalIndex = array_search('--internal', $_SERVER['argv']);
 
     if ($internalIndex === false) {
         // We are NOT inside npm run dev yet. Start it.
