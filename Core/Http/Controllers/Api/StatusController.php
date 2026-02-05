@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Core\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Traits\ApiResponse;
+use Core\Traits\ApiResponse;
 use Illuminate\Http\Request;
 
 class StatusController extends Controller

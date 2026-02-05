@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Console;
+namespace Core\Console;
 
 class ServeInterceptor
 {

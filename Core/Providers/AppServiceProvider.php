@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Providers;
+namespace Core\Providers;
 
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
@@ -21,5 +21,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Vite::prefetch(concurrency: 3);
+
+        \Illuminate\Support\Facades\Event::listen(\Illuminate\Console\Events\ArtisanStarting::class, function ($event) {
+            $event->artisan->setName('XenoPHP Framework');
+        });
     }
 }

@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Core\Console\Commands;
+namespace Core\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ViewClearCommand extends Command
+class ViewCacheCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'view:clear';
+    protected $signature = 'view:cache';
 
     /**
      * The console command description.
@@ -26,6 +26,6 @@ class ViewClearCommand extends Command
     public function handle()
     {
         $this->components->warn('Views are not used in this MC (Model-Controller) architecture.');
-        $this->components->info('Skipping view clearing.');
+        $this->components->info('Skipping view compilation.');
     }
 }

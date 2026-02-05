@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Kernel as SymfonyKernel;
 use Cake\Core\Configure as CakeConfigure;
 
-use App\Traits\ApiResponse;
+use Core\Traits\ApiResponse;
 
 class WelcomeController extends Controller
 {
