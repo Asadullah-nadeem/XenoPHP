@@ -1,4 +1,8 @@
-<p align="center"><img src="xenophp_logo.png" width="400" alt="XenoPHP Framework Logo"></p>
+<p align="center">
+  <img src="https://ik.imagekit.io/sFDkasdjo3i8/XenoPHP/xeno.png?updatedAt=1770380458240"
+       width="600"
+       alt="XenoPHP Framework Logo">
+</p>
 
 # XenoPHP Framework
 
