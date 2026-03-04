@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67c5143a1e1fc8a964ccf69641d46e4a",
+    "content-hash": "8a5a810e1fa521dd8352129f808fd6fd",
     "packages": [
         {
             "name": "brick/math",
@@ -6365,6 +6365,62 @@
                 }
             ],
             "time": "2024-11-24T11:45:37+00:00"
+        },
+        {
+            "name": "xenophp/xenophp",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XenoPHP/xenophp.git",
+                "reference": "8abbcc98b565a15e249006b709b4651b4ca5807a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XenoPHP/xenophp/zipball/8abbcc98b565a15e249006b709b4651b4ca5807a",
+                "reference": "8abbcc98b565a15e249006b709b4651b4ca5807a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^12.0",
+                "php": "^8.2",
+                "symfony/yaml": "^6.4",
+                "workerman/phpsocket.io": "^2.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Core\\Providers\\AppServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Helpers/Common.php"
+                ],
+                "psr-4": {
+                    "Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asadullah Nadeem",
+                    "homepage": "https://github.com/Asadullah-nadeem",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Framework for XenoPHP Composer",
+            "support": {
+                "docs": "https://in.linkedin.com/in/asadullah-nadeem",
+                "issues": "https://github.com/XenoPHP/xenophp/issues",
+                "source": "https://github.com/Asadullah-nadeem"
+            },
+            "time": "2026-03-03T23:53:59+00:00"
         }
     ],
     "packages-dev": [
@@ -8730,7 +8786,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "xenophp/xenophp": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

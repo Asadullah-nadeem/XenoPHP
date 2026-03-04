@@ -12,13 +12,13 @@ use Illuminate\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__ . '/../Core/Routes/web.php',
+        web: __DIR__ . '/../vendor/xenophp/xenophp/Routes/web.php',
         api: __DIR__ . '/../routes/api.php',
-        commands: __DIR__ . '/../Core/Routes/console.php',
+        commands: __DIR__ . '/../vendor/xenophp/xenophp/Routes/console.php',
         health: '/up',
         then: function () {
-            require __DIR__ . '/../Core/Routes/user.php';
-            require __DIR__ . '/../Core/Routes/client.php';
+            require __DIR__ . '/../vendor/xenophp/xenophp/Routes/user.php';
+            require __DIR__ . '/../vendor/xenophp/xenophp/Routes/client.php';
         },
     )
     ->withMiddleware(function (Middleware $middleware): void {
